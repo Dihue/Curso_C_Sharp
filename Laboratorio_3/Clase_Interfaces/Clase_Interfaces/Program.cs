@@ -14,19 +14,19 @@ namespace Clase_Interfaces
 
     abstract class Deporte : IJugador
     {
-        public void correr() { }
+        public virtual void correr() { }
 
-        public void pasar() { }
+        public virtual void pasar() { }
     }
 
     class Futbol : Deporte
     {
-        public void correr()
+        override public void correr()
         {
             Console.WriteLine("Correr en la cancha");
         }
 
-        public void pasar()
+        override public void pasar()
         {
             Console.WriteLine("Hace un pase al compañero");
         }
@@ -34,12 +34,12 @@ namespace Clase_Interfaces
 
     class Basquet : Deporte
     {
-        public void correr()
+        override public void correr()
         {
             Console.WriteLine("Correr en la cancha de parquet");
         }
 
-        public void pasar()
+        override public void pasar()
         {
             Console.WriteLine("Hace un pase al compañero con una mano");
         }
@@ -74,6 +74,7 @@ namespace Clase_Interfaces
             Equipo equipo = new Equipo();
 
             equipo.entrenar(new Futbol());
+
             equipo.entrenar(new Basquet());
 
             equipo.entrenar(new Programador());

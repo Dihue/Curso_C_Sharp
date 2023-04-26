@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_Interfaces", "Clase_Interfaces\Clase_Interfaces.csproj", "{0157AC26-3710-4D65-8951-0D0ED302EDEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase_Interfaces_Inyeccion", "Clase_Interfaces\Clase_Interfaces_Inyeccion.csproj", "{0157AC26-3710-4D65-8951-0D0ED302EDEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
