@@ -94,7 +94,48 @@ namespace Herencia
     {
         static void Main(string[] args)
         {
-            
+            Random random = new Random();
+
+            CuentaBancaria[] cuentas = new CuentaBancaria[10];
+
+            for (int i = 0; i < 5; i++)
+            {
+                cuentas[i] = new CuentaAhorro(random.Next(1000, 10000), 2.5);
+            }
+
+            for (int i = 5; i < 10; i++)
+            {
+                cuentas[i] = new CuentaCorriente(random.Next(1000, 10000), 5000, 5);
+            }
+
+            for (int i = 0; i < 100; i++)
+            {
+                int indiceCuenta = random.Next(0, 10);
+                double monto = random.Next(10, 10000);
+
+                if (random.Next(0,2) == 0)
+                {
+                    cuentas[indiceCuenta].Depositar(monto);
+                }
+                else
+                {
+                    cuentas[indiceCuenta].Extraer(monto);
+                }
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Saldo de la cuenta {0}: {1}", i+1, cuentas[i].ObtenerSaldo());
+
+                if (cuentas[i] is CuentaAhorro)
+                {
+                    CuentaAhorro cuentaAhorro = (CuentaAhorro)cuentas[i];
+                    cuentaAhorro.CalcularIntereses();
+
+                    Console.WriteLine("Saldo de la cuenta {0} con intereses: {1}", i + 1, cuentaAhorro.ObtenerSaldo());
+                }
+            }
+            Console.ReadLine();
         }
     }
 }
