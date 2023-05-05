@@ -36,6 +36,12 @@ namespace Ejemplo_Arrays_2
             {
                 Console.WriteLine(valores[i]);
             }
+
+            Console.WriteLine("\nBucle Foreach");
+            foreach (Empleados variable in arrayEmpleados)
+            {
+                Console.WriteLine(variable.Nombre);
+            }
         }
     }
 
@@ -44,10 +50,13 @@ namespace Ejemplo_Arrays_2
         public Empleados(string nombre, int edad)
         {
             this.nombre = nombre;
-            this.edad = edad;
+            this.Edad = edad;
         }
 
-        string nombre;
-        int edad;
+        private string nombre;
+        private int edad;
+
+        public int Edad { get => edad; set => edad = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
     }
 }
