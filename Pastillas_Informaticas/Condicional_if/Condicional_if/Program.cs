@@ -19,14 +19,37 @@ namespace Condicional_if
             // Operador negación !
             Console.WriteLine("Negado: " + !haceFrio);
 
+            Console.WriteLine("\nIntroduce tu edad:");
+            // El ReadLine leer strings, por lo que debemos cambiar el tipo de dato
+            // en este caso, se usa el método Parse
+            int edad = int.Parse(Console.ReadLine());
 
-            int edad = 15;
+            Console.WriteLine("\n¿Tienes carnet? Si/No");
+            string carnet = Console.ReadLine();
 
-            Console.WriteLine("\nVamos a evaluar si eres mayor de edad");
+            
 
-            if (edad >= 18)
+            if (edad >= 18 && carnet == "Si")
             {
-                Console.WriteLine("Eres mayor de edad");
+                Console.WriteLine("Puedes conducir");
+            }
+            else
+            {
+                Console.WriteLine("No puedes conducir");
+            }
+
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine("Vamos a evaluar si puedes conducir");
+
+            bool carnet2 = false;
+
+            if (carnet2) 
+            {
+                Console.WriteLine("Puedes conducir");
+            }
+            else
+            {
+                Console.WriteLine("Lo siento, no puedes condicir");
             }
         }
     }
