@@ -21,9 +21,16 @@ namespace Interfaces_1
         }
 
         // Métodos que provienen de las interfaces
-        public int NumeroDePatas()
+        // Se debe quitar el modificador de acceso public para identificar de donde viene
+        int IMamiferosTerrestres.NumeroDePatas()
         {
             return 4;
+        }
+
+        // Al tener método del mismo nombre pero que vienen de distintas interfaces
+        int ISaltoConPatas.NumeroDePatas()
+        {
+            return 2;
         }
 
         public string TipoDeporte()
